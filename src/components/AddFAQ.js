@@ -1,14 +1,24 @@
 import React from "react";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
+import { Toolbar } from "primereact/toolbar";
+import { Link } from "react-router-dom";
 
 export default function AddFAQ() {
-    
+    const toolbarLeftTemplate = () => {
+        return <h5>Add FAQ</h5>;
+    };
+    const toolbarRightTemplate = (
+        <Link to="/faq/view">
+            <Button>View FAQ</Button>
+        </Link>
+    );
     return (
         <div className="grid">
             <div className="col-12">
                 <div className="card p-fluid">
-                    <h5>Vertical</h5>
+                    <Toolbar left={toolbarLeftTemplate} right={toolbarRightTemplate}></Toolbar>
+
                     <div className="field">
                         <label htmlFor="question">question</label>
                         <InputText id="question" type="text" />

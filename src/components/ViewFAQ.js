@@ -1,5 +1,8 @@
 import React from "react";
 import { Accordion, AccordionTab } from "primereact/accordion";
+import { Link } from "react-router-dom";
+import { Toolbar } from "primereact/toolbar";
+import { Button } from "primereact/button";
 
 export default function ViewFAQ() {
     const data = [
@@ -16,11 +19,19 @@ export default function ViewFAQ() {
             answer: "ayush",
         },
     ];
+    const toolbarLeftTemplate = () => {
+        return <h5>FAQ</h5>;
+    };
+    const toolbarRightTemplate = (
+        <Link to="/faq/add">
+            <Button>Add FAQ</Button>
+        </Link>
+    );
     return (
         <div className="grid">
             <div className="col-12">
                 <div className="card">
-                    <h5>FAQs</h5>
+                    <Toolbar left={toolbarLeftTemplate} right={toolbarRightTemplate}></Toolbar>
                     <Accordion activeIndex={0}>
                         {data.map((e, i) => {
                             return (
