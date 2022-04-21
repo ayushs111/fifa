@@ -1,49 +1,25 @@
 {
-    "name": "sakai-react",
-    "version": "7.0.3-SNAPSHOT",
-    "homepage": ".",
-    "private": false,
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/primefaces/sakai-react.git"
-    },
-    "license": "MIT",
-    "dependencies": {
-        "@fullcalendar/core": "^5.7.2",
-        "@fullcalendar/daygrid": "^5.7.2",
-        "@fullcalendar/interaction": "^5.7.2",
-        "@fullcalendar/timegrid": "^5.7.2",
-        "@fullcalendar/react": "^5.7.0",
-        "chart.js": "3.3.2",
-        "primereact": "7.2.0",
-        "primeflex": "3.1.0",
-        "primeicons": "^5.0.0",
-        "prismjs": "1.9.0",
-        "react": "^17.0.1",
-        "react-app-polyfill": "^1.0.6",
-        "react-dom": "^17.0.1",
-        "react-router-dom": "^5.2.0",
-        "react-scripts": "3.4.1",
-        "react-transition-group": "^4.4.1",
-        "sass": "^1.32.8",
-        "axios": "^0.19.0",
-        "classnames": "^2.2.6"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app"
-        ]
-    },
-    "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not ie <= 11",
-        "not op_mini all"
-    ]
+  "name": "mingletainment-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www"
+  },
+  "author": "vinus",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-jwt": "^6.1.1",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15"
+  }
 }
